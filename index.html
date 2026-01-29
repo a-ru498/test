@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>holitor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background: #2e8b57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #1f6b43;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1542838132-92c53300491e') center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      border-left: 6px solid #2e8b57;
+      padding-left: 10px;
+    }
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .item {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>holitor</h1>
+    <p>地域密着・毎日新鮮！</p>
+  </header>
+
+  <nav>
+    <a href="#about">お店について</a>
+    <a href="#items">おすすめ商品</a>
+    <a href="#access">アクセス</a>
+  </nav>
+
+  <div class="hero">
+    新鮮・安心・おトク
+  </div>
+
+  <div class="container" id="about">
+    <h2>お店について</h2>
+    <p>
+      holitorは、地域の皆さまに愛されるスーパーマーケットです。 
+      新鮮な野菜・お肉・お魚を毎日取りそろえています。
+    </p>
+  </div>
+
+  <div class="container" id="items">
+    <h2>おすすめ商品</h2>
+    <div class="items">
+      <div class="item">
+        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="野菜" />
+        <h3>新鮮野菜セット</h3>
+        <p>地元農家直送！</p>
+      </div>
+      <div class="item">
+        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d" alt="肉" />
+        <h3>国産牛ステーキ</h3>
+        <p>特売価格！</p>
+      </div>
+      <div class="item">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947" alt="魚" />
+        <h3>本日の鮮魚</h3>
+        <p>朝獲れ新鮮</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="access">
+    <h2>アクセス</h2>
+    <p>〒000-0000 東京都〇〇区〇〇町1-2-3</p>
+    <p>営業時間：9:00〜21:00（年中無休）</p>
+  </div>
+
+  <footer>
+    <p>holitorスーパー</p>
+  </footer>
+
+</body>
+</html>
