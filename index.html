@@ -4,25 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>holitorスーパー</title>
+
   <style>
-  .flyer-full {
-      width: 100%;
-      max-width: 800px; 
-      margin: 20px auto;
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-  
-    .flyer-full img {
-      width: 100%;       /* 横幅いっぱいに広げる */
-      height: auto;      /* 比率を維持 */
-      border-radius: 5px;
-      display: block;
-      margin-bottom: 15px;
-    }
     body {
       margin: 0;
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
@@ -41,8 +24,9 @@
       background: #1f6b43;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 10px 0;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
       flex-wrap: wrap;
     }
 
@@ -54,6 +38,20 @@
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    .bgm-btn {
+      background: #fff;
+      color: #1f6b43;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 14px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .bgm-btn:hover {
+      background: #e0f2e9;
     }
 
     .hero {
@@ -101,6 +99,21 @@
       border-radius: 20px;
     }
 
+    .flyer-full {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .flyer-full img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
     footer {
       background: #333;
       color: white;
@@ -110,101 +123,98 @@
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>holitorスーパー</h1>
-    <p>地域密着・毎日新鮮！</p>
-  </header>
+<header>
+  <h1>holitorスーパー</h1>
+  <p>地域密着・毎日新鮮！</p>
+</header>
 
-  <nav>
-    <a href="#about">お店について</a>
-    <a href="#items">おすすめ商品</a>
-    <a href="#flyer">チラシ</a>
-    <a href="#access">アクセス</a>
-  </nav>
+<nav>
+  <a href="#about">お店について</a>
+  <a href="#items">おすすめ商品</a>
+  <a href="#flyer">チラシ</a>
+  <a href="#access">アクセス</a>
 
-  <div class="hero">
-    新鮮・安心・おトク（9:01まで営業）
-  </div>
+  <button class="bgm-btn" onclick="toggleBGM()">♪ BGM</button>
+</nav>
 
-  <!-- お店について -->
-  <div class="container" id="about">
-    <h2>お店について</h2>
-    <p>
-      holitorスーパーは、地域の皆さまに愛されるスーパーマーケットです。
-      新鮮な野菜・お肉・お魚を毎日取りそろえています。
-    </p>
-  </div>
+<div class="hero">
+  新鮮・安心・おトク（※9:01まで）
+</div>
 
-  <!-- おすすめ商品 -->
-  <div class="container" id="items">
-    <h2>おすすめ商品</h2>
-    <div class="items">
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="野菜">
-        <h3>新鮮野菜セット</h3>
-        <p>地元農家から毎朝届く、旬の野菜をたっぷり。</p>
-      </div>
+<div class="container" id="about">
+  <h2>お店について</h2>
+  <p>
+    holitorスーパーは、地域の皆さまに愛されるスーパーマーケットです。<br>
+    新鮮な野菜・お肉・お魚を毎日取りそろえています。<br>
+    <small>※店長は朝が弱いです。</small>
+  </p>
+</div>
 
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d" alt="肉">
-        <h3>国産牛ステーキ</h3>
-        <p>やわらかさと旨みが自慢の一品。</p>
-      </div>
+<div class="container" id="items">
+  <h2>おすすめ商品</h2>
+  <div class="items">
 
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1544025162-d76694265947" alt="魚">
-        <h3>本日の鮮魚</h3>
-        <p>朝獲れならではの鮮度をそのまま食卓へ。</p>
-      </div>
-
-      <div class="item">
-        <img src="images/image.png" alt="屋久島">
-        <h3>屋久島の恵み</h3>
-        <p>深い森と清らかな水に育まれた、屋久島の自然。</p>
-      </div>
-
-      <div class="item">
-        <img src="images/image (1).png" alt="フィリピン">
-        <h3>フィリピンの海</h3>
-        <p>青く澄んだ海と陽気な風を感じる南国の景色。</p>
-      </div>
-
-      <div class="item">
-        <img src="images/image (2).png" alt="佐渡">
-        <h3>佐渡の山景色</h3>
-        <p>四季折々の表情を見せる、佐渡の雄大な自然。</p>
-      </div>
-
-      <div class="item">
-        <img src="images/image (3).png" alt="長野">
-        <h3>長野の清流</h3>
-        <p>澄んだ水と緑に包まれた、心落ち着く風景。</p>
-      </div>
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce">
+      <h3>新鮮野菜セット</h3>
+      <p>地元農家直送<br><small>※野菜はしゃべりません</small></p>
     </div>
-  </div>
 
-  <!-- チラシ -->
-  <div class="container" id="flyer">
-    <h2>今週のチラシ</h2>
-    <div class="flyer-full">
-        <img src="images/image (6).png" alt="今週のチラシ">
-        <h3>今週の特売</h3>
-        <p>野菜・お肉・鮮魚がお買い得！</p>
-      </div>
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+      <h3>国産牛ステーキ</h3>
+      <p>旨みたっぷり<br><small>※牛に感謝</small></p>
     </div>
-  </div>
-  <!-- アクセス -->
-  <div class="container" id="access">
-    <h2>アクセス</h2>
-    <p>〒952-1501 新潟県佐渡市下相川１３０５</p>
-    <p>営業時間：9:00〜9:01</p>
-  </div>
 
-  <footer>
-    <p>© 2026 holitorスーパー</p>
-  </footer>
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+      <h3>本日の鮮魚</h3>
+      <p>朝獲れ<br><small>※さっきまで泳いでた</small></p>
+    </div>
+
+  </div>
+</div>
+
+<div class="container" id="flyer">
+  <h2>今週のチラシ</h2>
+  <div class="flyer-full">
+    <img src="images/image (6).png">
+    <p>※見てるだけでお腹が空きます</p>
+  </div>
+</div>
+
+<div class="container" id="access">
+  <h2>アクセス</h2>
+  <p>〒952-1501 新潟県佐渡市下相川１３０５</p>
+  <p>営業時間：9:00〜9:01</p>
+</div>
+
+<footer>
+  <p>© 2026 holitorスーパー</p>
+</footer>
+
+<!-- BGM -->
+<audio id="bgm" src="https://www.gunmadenki.co.jp/media/yobi-no4/NO4.m3u8" loop></audio>
+
+<script>
+  let playing = false;
+
+  function toggleBGM() {
+    const bgm = document.getElementById("bgm");
+
+    if (!playing) {
+      bgm.volume = 0.3;
+      bgm.play();
+      playing = true;
+    } else {
+      bgm.pause();
+      playing = false;
+    }
+  }
+</script>
 
 </body>
 </html>
